@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Is App Installed - History</title>
+	<link rel="manifest" href="/manifest.webmanifest">
+</head>
+<body>
+	<h1>Is App Installed - History</h1>
+	<pre id="result">Loading...</pre>
+	<script>
+		async function showInstalledRelatedApps() {
+			if (window.navigator.getInstalledRelatedApps) {
+				try {
+					const result = await window.navigator.getInstalledRelatedApps();
+					document.getElementById('result').textContent = JSON.stringify(result, null, 2);
+				} catch (e) {
+					document.getElementById('result').textContent = 'Error: ' + e;
+				}
+			} else {
+				document.getElementById('result').textContent = 'getInstalledRelatedApps is not supported in this browser.';
+			}
+		}
+		showInstalledRelatedApps();
+	</script>
+</body>
+</html>

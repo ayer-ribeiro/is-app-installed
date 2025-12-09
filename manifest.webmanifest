@@ -1,0 +1,12 @@
+{
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.paypal.android.p2pmobile"
+    }
+  ],
+  "scope_extensions": [
+    { "type": "origin", "origin": "https://github.paypal.com/" }
+  ]
+}
+ 
