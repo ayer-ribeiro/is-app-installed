@@ -10,6 +10,6 @@
     }
   ],
   "scope_extensions": [
-    { "type": "origin", "origin": "https://github.paypal.com/" }
+    { "type": "origin", "origin": "https://ayer-ribeiro.github.io" }
   ]
 }
